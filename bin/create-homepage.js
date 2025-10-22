@@ -345,7 +345,7 @@ function updatePackageJson(projectName) {
   // 更新项目信息
   pkg.name = projectName;
   pkg.version = "0.1.0";
-  pkg.description = "基于 @penjc/homepage 模板创建的个人主页";
+  pkg.description = "基于 @ducr/homepage 模板创建的个人主页";
   
   // 移除bin配置和files配置，这些是模板包特有的
   delete pkg.bin;

@@ -78,10 +78,9 @@ function AnimatedSection({ children, className = "", delay = 0 }: {
 
 // 技能图标映射
 const skillIcons: { [key: string]: any } = {
-  '后端开发': ServerIcon,
-  '数据库': ServerIcon,
-  '云服务与运维': CloudIcon,
   '前端技术': CodeBracketIcon,
+  '服务端与运维': ServerIcon,
+  // '云服务与运维': CloudIcon,
 };
 
 export default function AboutPage() {
@@ -479,8 +478,8 @@ export default function AboutPage() {
           </AnimatedSection>
         )}
 
-        {/* Education - 只有当 education 存在且有项目时才显示 */}
-        {about.education && about.education.items && about.education.items.length > 0 && (
+        {/* Technology - 只有当 technology 存在且有段落时才显示 */}
+        {about.technology && about.technology.paragraphs && about.technology.paragraphs.length > 0 && (
           <AnimatedSection className="mb-20">
             <div className="text-center mb-12">
               <motion.h2 
@@ -490,7 +489,7 @@ export default function AboutPage() {
                 viewport={{ once: true }}
                 className="text-4xl font-thin tracking-widest font-serif text-gray-900 dark:text-white mb-4"
               >
-                {about.education.title || '教育背景'}
+                {about.technology.title || '职业技能'}
               </motion.h2>
               <motion.div 
                 initial={{ width: 0 }}
@@ -500,103 +499,23 @@ export default function AboutPage() {
                 className="w-24 h-1 bg-gray-800 dark:bg-gray-200 mx-auto rounded-full"
               />
             </div>
-            <div className="relative">
-              {/* Timeline line */}
-              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gray-300 dark:bg-gray-700 hidden md:block"></div>
-              
-              <motion.div
-                variants={staggerContainer}
-                initial="initial"
-                whileInView="animate"
-                viewport={{ once: true }}
-                className="space-y-12"
-              >
-                {about.education.items.map((edu, index) => (
-                  <motion.div 
-                    key={index} 
-                    variants={index % 2 === 0 ? fadeInLeft : fadeInRight}
-                    className="relative flex gap-8"
-                  >
-                    {/* Timeline dot */}
-                    <div className="hidden md:flex w-16 h-16 bg-gray-800 dark:bg-gray-200 rounded-full items-center justify-center flex-shrink-0 shadow-lg">
-                      <AcademicCapIcon className="w-8 h-8 text-white dark:text-gray-900" />
-                    </div>
-                    
-                    <motion.div 
-                      whileHover={{ 
-                        y: -4, 
-                        boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
-                        borderColor: "rgb(209 213 219)"
-                      }}
-                      transition={{ duration: 0.2, ease: "easeOut" }}
-                      className="flex-1 bg-white dark:bg-gray-900 rounded-lg p-8 shadow-sm border border-gray-200 dark:border-gray-800"
-                    >
-                      <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                        <div>
-                          {(edu as any).degree && (
-                            <motion.h3 
-                              initial={{ opacity: 0, x: -20 }}
-                              whileInView={{ opacity: 1, x: 0 }}
-                              transition={{ duration: 0.5, delay: 0.2 }}
-                              viewport={{ once: true }}
-                              className="text-2xl font-thin tracking-wide font-serif italic text-gray-900 dark:text-white mb-2"
-                            >
-                              {(edu as any).degree}
-                            </motion.h3>
-                          )}
-                          {edu.school && (
-                            <motion.p 
-                              initial={{ opacity: 0, x: -20 }}
-                              whileInView={{ opacity: 1, x: 0 }}
-                              transition={{ duration: 0.5, delay: 0.3 }}
-                              viewport={{ once: true }}
-                              className="text-gray-600 dark:text-gray-400 font-medium text-lg font-thin tracking-wide font-serif"
-                            >
-                              {edu.school}
-                            </motion.p>
-                          )}
-                        </div>
-                        <div className="text-right mt-2 md:mt-0">
-                          {edu.year && (
-                            <motion.span 
-                              initial={{ opacity: 0, scale: 0.8 }}
-                              whileInView={{ opacity: 1, scale: 1 }}
-                              transition={{ duration: 0.4, delay: 0.4 }}
-                              viewport={{ once: true }}
-                              className="text-gray-500 dark:text-gray-400 font-medium bg-gray-100 dark:bg-gray-800 px-4 py-2 rounded-md text-sm font-thin tracking-wide font-serif"
-                            >
-                              {edu.year}
-                            </motion.span>
-                          )}
-                          {(edu as any).gpa && (
-                            <motion.p 
-                              initial={{ opacity: 0, y: 10 }}
-                              whileInView={{ opacity: 1, y: 0 }}
-                              transition={{ duration: 0.4, delay: 0.5 }}
-                              viewport={{ once: true }}
-                              className="text-gray-700 dark:text-gray-300 font-bold mt-2 font-thin tracking-wide font-serif"
-                            >
-                              GPA: {(edu as any).gpa}
-                            </motion.p>
-                          )}
-                        </div>
-                      </div>
-                      {edu.description && (
-                        <motion.p 
-                          initial={{ opacity: 0, y: 20 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          transition={{ duration: 0.5, delay: 0.6 }}
-                          viewport={{ once: true }}
-                          className="text-gray-600 dark:text-gray-300 leading-relaxed font-thin tracking-wide font-serif"
-                        >
-                          {edu.description}
-                        </motion.p>
-                      )}
-                    </motion.div>
-                  </motion.div>
-                ))}
-              </motion.div>
-            </div>
+            <motion.div
+              variants={staggerContainer}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              {about.technology.paragraphs.map((paragraph, index) => (
+                <motion.p
+                  key={index}
+                  variants={fadeInUp}
+                  className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6 text-left font-thin tracking-wide font-serif"
+                >
+                  {paragraph}
+                </motion.p>
+              ))}
+            </motion.div>
           </AnimatedSection>
         )}
 
@@ -734,6 +653,281 @@ export default function AboutPage() {
                             </motion.div>
                           ))}
                         </motion.div>
+                      )}
+                    </motion.div>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </div>
+          </AnimatedSection>
+        )}
+
+        {/* Project - 只有当 project 存在且有项目时才显示 */}
+        {(about as any).project?.items && (about as any).project.items.length > 0 && (
+          <AnimatedSection className="mb-20">
+            <div className="text-center mb-12">
+              <motion.h2 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="text-4xl font-thin tracking-widest font-serif text-gray-900 dark:text-white mb-4"
+              >
+                {(about as any).project.title || '工作经历'}
+              </motion.h2>
+              <motion.div 
+                initial={{ width: 0 }}
+                whileInView={{ width: 96 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="w-24 h-1 bg-gray-800 dark:bg-gray-200 mx-auto rounded-full"
+              />
+            </div>
+            <div className="relative">
+              {/* Timeline line */}
+              <motion.div 
+                initial={{ height: 0 }}
+                whileInView={{ height: "100%" }}
+                transition={{ duration: 1.2, delay: 0.5 }}
+                viewport={{ once: true }}
+                className="absolute left-8 top-0 w-0.5 bg-gray-300 dark:bg-gray-700 hidden md:block"
+              />
+              
+              <motion.div
+                variants={staggerContainer}
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true }}
+                className="space-y-12"
+              >
+                {(about as any).project.items.map((pro: any, index: number) => (
+                  <motion.div 
+                    key={index} 
+                    variants={index % 2 === 0 ? fadeInLeft : fadeInRight}
+                    className="relative flex gap-8"
+                  >
+                    {/* Timeline dot */}
+                    <motion.div 
+                      initial={{ scale: 0, opacity: 0 }}
+                      whileInView={{ scale: 1, opacity: 1 }}
+                      transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="hidden md:flex w-16 h-16 bg-gray-800 dark:bg-gray-200 rounded-full items-center justify-center text-white dark:text-gray-900 font-bold text-sm shadow-lg"
+                    >
+                      {index + 1}
+                    </motion.div>
+                    
+                    <motion.div 
+                      whileHover={{ 
+                        y: -4, 
+                        boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+                        borderColor: "rgb(209 213 219)"
+                      }}
+                      transition={{ duration: 0.2, ease: "easeOut" }}
+                      className="flex-1 bg-white dark:bg-gray-900 rounded-lg p-8 shadow-sm border border-gray-200 dark:border-gray-800"
+                    >
+                      <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <div>
+                          {pro.title && (
+                            <motion.h3 
+                              initial={{ opacity: 0, x: -20 }}
+                              whileInView={{ opacity: 1, x: 0 }}
+                              transition={{ duration: 0.5, delay: 0.2 }}
+                              viewport={{ once: true }}
+                              className="text-2xl font-thin tracking-wide font-serif italic text-gray-900 dark:text-white mb-2"
+                            >
+                              {pro.title}
+                            </motion.h3>
+                          )}
+                        </div>
+                        {pro.year && (
+                          <motion.span 
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.4, delay: 0.4 }}
+                            viewport={{ once: true }}
+                            className="text-gray-500 dark:text-gray-400 font-medium bg-gray-100 dark:bg-gray-800 px-4 py-2 rounded-md text-sm mt-2 md:mt-0 font-thin tracking-wide font-serif"
+                          >
+                            {pro.year}
+                          </motion.span>
+                        )}
+                      </div>
+                      {pro.description && (
+                        <motion.p 
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.5, delay: 0.3 }}
+                          viewport={{ once: true }}
+                          className="text-gray-400 dark:text-gray-400 mb-2 font-medium font-thin tracking-wide font-serif"
+                        >
+                          {pro.description}
+                        </motion.p>
+                      )}
+                      {pro.responsibility && (
+                        <motion.p 
+                          initial={{ opacity: 0, y: 20 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 0.5, delay: 0.5 }}
+                          viewport={{ once: true }}
+                          className="text-gray-400 dark:text-gray-400 mb-2 leading-relaxed font-thin tracking-wide font-serif"
+                        >
+                          {pro.responsibility}
+                        </motion.p>
+                      )}
+                      {pro.stack && (
+                        <motion.p 
+                          initial={{ opacity: 0, y: 20 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 0.5, delay: 0.5 }}
+                          viewport={{ once: true }}
+                          className="text-gray-400 dark:text-gray-300 mb-6 leading-relaxed font-thin tracking-wide font-serif italic"
+                        >
+                          {pro.stack}
+                        </motion.p>
+                      )}
+                      {pro.highlights && pro.highlights.length > 0 && (
+                        <motion.div 
+                          initial={{ opacity: 0 }}
+                          whileInView={{ opacity: 1 }}
+                          transition={{ duration: 0.6, delay: 0.6 }}
+                          viewport={{ once: true }}
+                          className="space-y-3"
+                        >
+                          {pro.highlights.map((highlight: string, idx: number) => (
+                            <motion.div 
+                              key={idx} 
+                              initial={{ opacity: 0, x: -20 }}
+                              whileInView={{ opacity: 1, x: 0 }}
+                              transition={{ duration: 0.4, delay: 0.7 + idx * 0.1 }}
+                              viewport={{ once: true }}
+                              className="flex items-start gap-3"
+                            >
+                              {/* <CheckCircleIcon className="w-5 h-5 text-gray-500 dark:text-gray-400 mt-0.5 flex-shrink-0" /> */}
+                              <span className="text-gray-600 dark:text-gray-300 font-thin tracking-wide font-serif">{highlight}</span>
+                            </motion.div>
+                          ))}
+                        </motion.div>
+                      )}
+                    </motion.div>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </div>
+          </AnimatedSection>
+        )}
+
+        {/* Education - 只有当 education 存在且有项目时才显示 */}
+        {about.education && about.education.items && about.education.items.length > 0 && (
+          <AnimatedSection className="mb-20">
+            <div className="text-center mb-12">
+              <motion.h2 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="text-4xl font-thin tracking-widest font-serif text-gray-900 dark:text-white mb-4"
+              >
+                {about.education.title || '教育背景'}
+              </motion.h2>
+              <motion.div 
+                initial={{ width: 0 }}
+                whileInView={{ width: 96 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="w-24 h-1 bg-gray-800 dark:bg-gray-200 mx-auto rounded-full"
+              />
+            </div>
+            <div className="relative">
+              {/* Timeline line */}
+              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gray-300 dark:bg-gray-700 hidden md:block"></div>
+              
+              <motion.div
+                variants={staggerContainer}
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true }}
+                className="space-y-12"
+              >
+                {about.education.items.map((edu, index) => (
+                  <motion.div 
+                    key={index} 
+                    variants={index % 2 === 0 ? fadeInLeft : fadeInRight}
+                    className="relative flex gap-8"
+                  >
+                    {/* Timeline dot */}
+                    <div className="hidden md:flex w-16 h-16 bg-gray-800 dark:bg-gray-200 rounded-full items-center justify-center flex-shrink-0 shadow-lg">
+                      <AcademicCapIcon className="w-8 h-8 text-white dark:text-gray-900" />
+                    </div>
+                    
+                    <motion.div 
+                      whileHover={{ 
+                        y: -4, 
+                        boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+                        borderColor: "rgb(209 213 219)"
+                      }}
+                      transition={{ duration: 0.2, ease: "easeOut" }}
+                      className="flex-1 bg-white dark:bg-gray-900 rounded-lg p-8 shadow-sm border border-gray-200 dark:border-gray-800"
+                    >
+                      <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <div>
+                          {(edu as any).degree && (
+                            <motion.h3 
+                              initial={{ opacity: 0, x: -20 }}
+                              whileInView={{ opacity: 1, x: 0 }}
+                              transition={{ duration: 0.5, delay: 0.2 }}
+                              viewport={{ once: true }}
+                              className="text-2xl font-thin tracking-wide font-serif italic text-gray-900 dark:text-white mb-2"
+                            >
+                              {(edu as any).degree}
+                            </motion.h3>
+                          )}
+                          {edu.school && (
+                            <motion.p 
+                              initial={{ opacity: 0, x: -20 }}
+                              whileInView={{ opacity: 1, x: 0 }}
+                              transition={{ duration: 0.5, delay: 0.3 }}
+                              viewport={{ once: true }}
+                              className="text-gray-600 dark:text-gray-400 font-medium text-lg font-thin tracking-wide font-serif"
+                            >
+                              {edu.school}
+                            </motion.p>
+                          )}
+                        </div>
+                        <div className="text-right mt-2 md:mt-0">
+                          {edu.year && (
+                            <motion.span 
+                              initial={{ opacity: 0, scale: 0.8 }}
+                              whileInView={{ opacity: 1, scale: 1 }}
+                              transition={{ duration: 0.4, delay: 0.4 }}
+                              viewport={{ once: true }}
+                              className="text-gray-500 dark:text-gray-400 font-medium bg-gray-100 dark:bg-gray-800 px-4 py-2 rounded-md text-sm font-thin tracking-wide font-serif"
+                            >
+                              {edu.year}
+                            </motion.span>
+                          )}
+                          {(edu as any).gpa && (
+                            <motion.p 
+                              initial={{ opacity: 0, y: 10 }}
+                              whileInView={{ opacity: 1, y: 0 }}
+                              transition={{ duration: 0.4, delay: 0.5 }}
+                              viewport={{ once: true }}
+                              className="text-gray-700 dark:text-gray-300 font-bold mt-2 font-thin tracking-wide font-serif"
+                            >
+                              GPA: {(edu as any).gpa}
+                            </motion.p>
+                          )}
+                        </div>
+                      </div>
+                      {edu.description && (
+                        <motion.p 
+                          initial={{ opacity: 0, y: 20 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 0.5, delay: 0.6 }}
+                          viewport={{ once: true }}
+                          className="text-gray-600 dark:text-gray-300 leading-relaxed font-thin tracking-wide font-serif"
+                        >
+                          {edu.description}
+                        </motion.p>
                       )}
                     </motion.div>
                   </motion.div>

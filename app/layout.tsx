@@ -43,12 +43,12 @@ export const metadata: Metadata = {
   // Icons configuration
   icons: {
     icon: [
-      { url: getServerAssetPath('/favicon.svg'), type: 'image/svg+xml' },
+      { url: getServerAssetPath('/favicon.ico'), type: 'image/x-icon' },
     ],
     other: [
       {
         rel: 'mask-icon',
-        url: getServerAssetPath('/favicon.svg'),
+        url: getServerAssetPath('/favicon.ico'),
         color: '#3b82f6',
       },
     ],
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [
       {
-        url: getServerAssetPath('/favicon.svg'),
+        url: getServerAssetPath('/favicon.ico'),
         width: 512,
         height: 512,
         alt: siteConfig.title,
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     title: siteConfig.title,
     description: siteConfig.description,
     creator: `@${siteConfig.name}`,
-    images: [getServerAssetPath('/favicon.svg')],
+    images: [getServerAssetPath('/favicon.ico')],
   },
   
   // Additional meta tags
@@ -140,7 +140,7 @@ export default function RootLayout({
         }} />
         
         {/* Favicon and icons */}
-        <link rel="icon" href={getServerAssetPath('/favicon.svg')} type="image/svg+xml" />
+        <link rel="icon" href={getServerAssetPath('/favicon.ico')} type="image/x-icon" />
         
 
         

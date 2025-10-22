@@ -82,7 +82,7 @@ navigation: {
 ```markdown
 ---
 title: "文章标题"
-date: "2024-01-15"
+date: "2025-10-11"
 description: "文章描述"
 tags: ["标签1", "标签2"]
 category: "分类"
@@ -100,7 +100,7 @@ category: "分类"
 ```markdown
 ---
 title: "随笔标题"
-date: "2024-01-15"
+date: "2025-08-27"
 description: "随笔描述"
 ---
 

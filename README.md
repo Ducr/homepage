@@ -5,23 +5,23 @@
 </div>
 
 <div align="center">
-  <a href="https://pengjiancheng.com" target="_blank">
-    <img src="https://github.com/penjc/homepage/blob/main/assets/homepage.svg?raw=true" width="200">
+  <a href="https://ducrong.com" target="_blank">
+    <img src="https://github.com/Ducr/homepage/blob/master/assets/homepage.svg?raw=true" width="200">
   </a>
 
-[![npm version](https://img.shields.io/npm/v/@penjc/homepage?style=flat-square)](https://www.npmjs.com/package/@penjc/homepage)
-[![npm downloads](https://img.shields.io/npm/dm/@penjc/homepage?style=flat-square)](https://www.npmjs.com/package/@penjc/homepage)
+[![npm version](https://img.shields.io/npm/v/@ducr/homepage?style=flat-square)](https://www.npmjs.com/package/@ducr/homepage)
+[![npm downloads](https://img.shields.io/npm/dm/@ducr/homepage?style=flat-square)](https://www.npmjs.com/package/@ducr/homepage)
 [![Vercel](https://img.shields.io/badge/Deploy_on-Vercel-black?style=flat-square&logo=vercel)](https://vercel.com)
 [![Netlify](https://img.shields.io/badge/Deploy_on-Netlify-00c7b7?style=flat-square&logo=netlify)](https://netlify.com)
 <!-- [![GitHub Pages](https://img.shields.io/badge/Deploy_on-GitHub_Pages-222?style=flat-square&logo=github)](https://pages.github.com/) -->
 
-[//]: # ([![GitHub stars]&#40;https://img.shields.io/github/stars/penjc/homepage?style=flat-square&#41;]&#40;https://github.com/penjc/homepage/stargazers&#41;)
+[//]: # ([![GitHub stars]&#40;https://img.shields.io/github/stars/Ducr/homepage?style=flat-square&#41;]&#40;https://github.com/Ducr/homepage/stargazers&#41;)
 
-[//]: # ([![GitHub forks]&#40;https://img.shields.io/github/forks/penjc/homepage?style=flat-square&#41;]&#40;https://github.com/penjc/homepage/network/members&#41;)
+[//]: # ([![GitHub forks]&#40;https://img.shields.io/github/forks/Ducr/homepage?style=flat-square&#41;]&#40;https://github.com/Ducr/homepage/network/members&#41;)
 
-[//]: # ([![GitHub issues]&#40;https://img.shields.io/github/issues/penjc/homepage?style=flat-square&#41;]&#40;https://github.com/penjc/homepage/issues&#41;)
+[//]: # ([![GitHub issues]&#40;https://img.shields.io/github/issues/Ducr/homepage?style=flat-square&#41;]&#40;https://github.com/Ducr/homepage/issues&#41;)
 
-[//]: # ([![GitHub license]&#40;https://img.shields.io/github/license/penjc/homepage?style=flat-square&#41;]&#40;https://github.com/penjc/homepage/blob/main/LICENSE&#41;)
+[//]: # ([![GitHub license]&#40;https://img.shields.io/github/license/Ducr/homepage?style=flat-square&#41;]&#40;https://github.com/Ducr/homepage/blob/master/LICENSE&#41;)
 
 [![Next.js](https://img.shields.io/badge/Next.js-13+-black?style=flat-square&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
@@ -29,11 +29,11 @@
 [![React](https://img.shields.io/badge/React-18+-61dafb?style=flat-square&logo=react)](https://reactjs.org/)
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-11+-ff0055?style=flat-square&logo=framer)](https://www.framer.com/motion/)
 
-[//]: # ([![PRs Welcome]&#40;https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square&#41;]&#40;https://github.com/penjc/homepage/pulls&#41;)
+[//]: # ([![PRs Welcome]&#40;https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square&#41;]&#40;https://github.com/Ducr/homepage/pulls&#41;)
 
-[//]: # ([![Maintenance]&#40;https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=flat-square&#41;]&#40;https://github.com/penjc/homepage/graphs/commit-activity&#41;)
+[//]: # ([![Maintenance]&#40;https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=flat-square&#41;]&#40;https://github.com/Ducr/homepage/graphs/commit-activity&#41;)
 
-[//]: # ([![Made with Love]&#40;https://img.shields.io/badge/Made%20with-❤️-red?style=flat-square&#41;]&#40;https://github.com/penjc&#41;)
+[//]: # ([![Made with Love]&#40;https://img.shields.io/badge/Made%20with-❤️-red?style=flat-square&#41;]&#40;https://github.com/Ducr&#41;)
 
 [//]: # ()
 
@@ -42,7 +42,7 @@
 基于 Next.js 13+ 构建的全功能个人主页模板，集成博客、项目展示、书单、友链等多种功能。  
 采用 TypeScript + Tailwind CSS + Framer Motion 技术栈，提供流畅的动画效果和卓越的用户体验。
 
-[🚀 快速开始](#-快速开始) • [📖 文档](#-文档) • [🎨 特性](#-特性) • [💻 演示](https://pengjiancheng.com) • [🤝 贡献](#-贡献)
+[🚀 快速开始](#-快速开始) • [📖 文档](#-文档) • [🎨 特性](#-特性) • [💻 演示](https://ducrong.com) • [🤝 贡献](#-贡献)
 
 简体中文 | [English](./README.en.md)
 
@@ -93,7 +93,7 @@
 
 ```bash
 # 创建新项目
-npx @penjc/homepage my-website
+npx @ducr/homepage my-website
 
 # 进入项目目录
 cd my-website
@@ -106,7 +106,7 @@ npm run dev
 
 ```bash
 # 克隆仓库
-git clone https://github.com/penjc/homepage.git my-website
+git clone https://github.com/Ducr/homepage.git my-website
 
 # 进入项目目录
 cd my-website
@@ -179,7 +179,7 @@ export const siteConfig = {
 ```markdown
 ---
 title: 标题
-date: "2025-06-04"
+date: "2025-10-11"
 category: "生活"
 tags: ["个人主页", "Next.js"]
 excerpt: "这是我的第一篇博客文章，欢迎来到我的个人主页！"
@@ -197,9 +197,9 @@ readTime: "3分钟"
 
 ```markdown
 ---
-date: "2025-06-04"
-mood: "🌧️"
-tags: ["感悟"]
+date: "2025-08-27"
+mood: "🤔"
+tags: ["计划"]
 ---
 
 # 随笔内容
@@ -311,25 +311,21 @@ about: {
   intro: {
     title: "个人简介",
     paragraphs: [
-      "后端开发工程师。熟练掌握后端技术栈...",
-      "在工作之余，我喜欢分享技术文章..."
+      "x年前端经验，拥有 2B/2G 的多个项目经验...",
+      "在工作之余，我喜欢阅读技术文章..."
     ]
   },
   
-  // 教育背景
-  education: {
-    title: "教育背景",
-    items: [
-      {
-        year: "2020 - 2024",
-        degree: "计算机科学与技术 硕士",
-        school: "大学名称",
-        description: "专业课程描述...",
-        gpa: "3.8/4.0"
-      }
+  
+  // 职业技能
+  experience: {
+    title: "职业技能",
+    paragraphs: [
+      "1、熟练 vue 全家桶",
+      "2、熟练 react 全家桶"
     ]
   },
-  
+
   // 工作经历
   experience: {
     title: "工作经历",
@@ -340,6 +336,35 @@ about: {
         company: "公司名称",
         description: "工作描述...",
         highlights: ["工作亮点1", "工作亮点2"]
+      }
+    ]
+  },
+
+  // 项目经历
+  experience: {
+    title: "项目经历",
+    items: [
+      {
+        year: "2023 - 现在",
+        title: "项目名称",
+        description: "项目描述...",
+        responsibility: "工作职责...",
+        stack: "主要技术...",
+        highlights: ["项目亮点1", "项目亮点2"]
+      }
+    ]
+  },
+
+  // 教育背景
+  education: {
+    title: "教育背景",
+    items: [
+      {
+        year: "2020 - 2024",
+        degree: "计算机科学与技术 硕士",
+        school: "大学名称",
+        description: "专业课程描述...",
+        gpa: "3.8/4.0"
       }
     ]
   },
@@ -410,7 +435,7 @@ export const siteConfig = {
 
 ### Vercel 部署（推荐）
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/penjc/homepage)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Ducr/homepage)
 
 1. 点击上方按钮
 2. 连接你的 GitHub 账户
@@ -418,7 +443,7 @@ export const siteConfig = {
 
 ### Netlify 部署
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/penjc/homepage)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Ducr/homepage)
 
 1. 点击上方按钮
 2. 连接你的 GitHub 账户
@@ -427,20 +452,20 @@ export const siteConfig = {
 
 <!-- ### GitHub Pages 部署
 
-项目内置了 GitHub Actions 工作流，推送到 `main` 分支时会自动部署到 GitHub Pages。
+项目内置了 GitHub Actions 工作流，推送到 `master` 分支时会自动部署到 GitHub Pages。
 
 #### 快速部署
 
 1. 在仓库设置中启用 GitHub Pages
 2. 选择 GitHub Actions 作为部署源
-3. 推送代码到 `main` 分支即可自动部署
+3. 推送代码到 `master` 分支即可自动部署
 
 #### 路径配置说明
 
 本项目针对 GitHub Pages 项目页面进行了特别优化，解决了静态资源路径问题：
 
-- **本地开发**: 所有资源使用相对路径（如 `/favicon.svg`）
-- **GitHub Pages**: 自动添加项目名前缀（如 `/homepage/favicon.svg`）
+- **本地开发**: 所有资源使用相对路径（如 `/favicon.ico`）
+- **GitHub Pages**: 自动添加项目名前缀（如 `/homepage/favicon.ico`）
 
 #### 构建命令
 
@@ -514,6 +539,6 @@ homepage/
 
 **如果这个项目对你有帮助，请给一个 ⭐️支持**
 
-Made with ❤️ by [penjc](https://pengjiancheng.com)
+Made with ❤️ by [Ducr](https://ducrong.com)
 
 </div> 
