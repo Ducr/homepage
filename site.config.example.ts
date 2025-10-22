@@ -13,25 +13,25 @@ export const siteConfig = {
     email: "ducrong@126.com",
     github: "https://github.com/Ducr",
     // 社交媒体链接（可选配置）
-    // social: {
-    //   linkedin: "https://linkedin.com/in/username",
-    //   twitter: "https://twitter.com/username",
-    //   bilibili: "https://space.bilibili.com/12345678",
-    //   youtube: "https://youtube.com/c/username",
-    //   telegram: "https://t.me/username",
-    //   instagram: "https://instagram.com/username",
-    // },
+    social: {
+      // linkedin: "https://linkedin.com/in/username",
+      // twitter: "https://twitter.com/username",
+      // bilibili: "https://space.bilibili.com/12345678",
+      // youtube: "https://youtube.com/c/username",
+      // telegram: "https://t.me/username",
+      // instagram: "https://instagram.com/username",
+    },
     // RSS 订阅配置
-    // rss: {
-    //   enabled: true,
-    //   title: "RSS 订阅",
-    // },
+    rss: {
+      enabled: false,
+      title: "RSS 订阅",
+    },
     // 旧版主页链接
-    // oldSite: {
-    //   enabled: false,
-    //   url: "https://ducrong.com",
-    //   title: "旧版主页",
-    // },
+    oldSite: {
+      enabled: false,
+      url: "https://ducrong.com",
+      title: "旧版主页",
+    },
   },
 
   // 首页配置
@@ -453,6 +453,7 @@ export const siteConfig = {
     },
     beian: { // 没有可不填
       // police: "沪公网安备31011500000000号", // 公安备案号
+      police: "", // 公安备案号
       icp: "粤ICP备2025484976号-1", // ICP备案号
     },
   },
