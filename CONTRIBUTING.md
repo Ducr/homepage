@@ -22,7 +22,7 @@
 
 如果你发现了bug，请：
 
-1. 检查[现有issues](https://github.com/penjc/homepage/issues)确保bug未被报告
+1. 检查[现有issues](https://github.com/Ducr/homepage/issues)确保bug未被报告
 2. 使用[Bug报告模板](.github/ISSUE_TEMPLATE/bug_report.md)创建新issue
 3. 提供详细的复现步骤和环境信息
 
@@ -30,7 +30,7 @@
 
 如果你有新功能的想法：
 
-1. 检查[现有issues](https://github.com/penjc/homepage/issues)确保功能未被建议
+1. 检查[现有issues](https://github.com/Ducr/homepage/issues)确保功能未被建议
 2. 使用[功能请求模板](.github/ISSUE_TEMPLATE/feature_request.md)创建新issue
 3. 详细描述功能的用途和实现方式
 
@@ -55,7 +55,7 @@
 
 ```bash
 # 克隆仓库
-git clone https://github.com/penjc/homepage.git
+git clone https://github.com/Ducr/homepage.git
 cd homepage
 
 # 安装依赖
@@ -182,7 +182,7 @@ git commit -m "docs: update installation guide"
 如果你需要帮助：
 
 - 查看[文档](docs/)
-- 搜索[现有issues](https://github.com/penjc/homepage/issues)
+- 搜索[现有issues](https://github.com/Ducr/homepage/issues)
 - 创建[问题issue](.github/ISSUE_TEMPLATE/question.md)
 - 联系维护者
 

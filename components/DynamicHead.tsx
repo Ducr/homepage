@@ -8,7 +8,7 @@ export default function DynamicHead() {
     // 更新 favicon 路径
     const favicon = document.querySelector('link[rel="icon"]') as HTMLLinkElement;
     if (favicon) {
-      favicon.href = getClientAssetPath('/favicon.svg');
+      favicon.href = getClientAssetPath('/favicon.ico');
     }
 
     // 更新 RSS feed 路径

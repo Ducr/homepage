@@ -17,17 +17,17 @@ const badges = {
   npm: {
     version: `[![npm version](https://img.shields.io/npm/v/${pkg.name}?style=flat-square)](https://www.npmjs.com/package/${pkg.name})`,
     downloads: `[![npm downloads](https://img.shields.io/npm/dm/${pkg.name}?style=flat-square)](https://www.npmjs.com/package/${pkg.name})`,
-    license: `[![npm license](https://img.shields.io/npm/l/${pkg.name}?style=flat-square)](https://github.com/penjc/homepage/blob/main/LICENSE)`,
+    license: `[![npm license](https://img.shields.io/npm/l/${pkg.name}?style=flat-square)](https://github.com/Ducr/homepage/blob/master/LICENSE)`,
   },
   github: {
-    stars: `[![GitHub stars](https://img.shields.io/github/stars/penjc/homepage?style=flat-square)](https://github.com/penjc/homepage/stargazers)`,
-    forks: `[![GitHub forks](https://img.shields.io/github/forks/penjc/homepage?style=flat-square)](https://github.com/penjc/homepage/network)`,
-    issues: `[![GitHub issues](https://img.shields.io/github/issues/penjc/homepage?style=flat-square)](https://github.com/penjc/homepage/issues)`,
-    license: `[![GitHub license](https://img.shields.io/github/license/penjc/homepage?style=flat-square)](https://github.com/penjc/homepage/blob/main/LICENSE)`,
+    stars: `[![GitHub stars](https://img.shields.io/github/stars/Ducr/homepage?style=flat-square)](https://github.com/Ducr/homepage/stargazers)`,
+    forks: `[![GitHub forks](https://img.shields.io/github/forks/Ducr/homepage?style=flat-square)](https://github.com/Ducr/homepage/network)`,
+    issues: `[![GitHub issues](https://img.shields.io/github/issues/Ducr/homepage?style=flat-square)](https://github.com/Ducr/homepage/issues)`,
+    license: `[![GitHub license](https://img.shields.io/github/license/Ducr/homepage?style=flat-square)](https://github.com/Ducr/homepage/blob/master/LICENSE)`,
   },
   ci: {
-    build: `[![Build Status](https://img.shields.io/github/actions/workflow/status/penjc/homepage/ci.yml?branch=main&style=flat-square)](https://github.com/penjc/homepage/actions)`,
-    deploy: `[![Deploy Status](https://img.shields.io/github/actions/workflow/status/penjc/homepage/deploy.yml?branch=main&style=flat-square&label=deploy)](https://github.com/penjc/homepage/actions)`,
+    build: `[![Build Status](https://img.shields.io/github/actions/workflow/status/Ducr/homepage/ci.yml?branch=master&style=flat-square)](https://github.com/Ducr/homepage/actions)`,
+    deploy: `[![Deploy Status](https://img.shields.io/github/actions/workflow/status/Ducr/homepage/deploy.yml?branch=master&style=flat-square&label=deploy)](https://github.com/Ducr/homepage/actions)`,
   },
   tech: {
     nextjs: `[![Next.js](https://img.shields.io/badge/Next.js-13+-black?style=flat-square&logo=next.js)](https://nextjs.org/)`,
@@ -35,8 +35,8 @@ const badges = {
     tailwind: `[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3+-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)`,
   },
   quality: {
-    codeclimate: `[![Code Climate](https://img.shields.io/codeclimate/maintainability/penjc/homepage?style=flat-square)](https://codeclimate.com/github/penjc/homepage)`,
-    codecov: `[![Codecov](https://img.shields.io/codecov/c/github/penjc/homepage?style=flat-square)](https://codecov.io/gh/penjc/homepage)`,
+    codeclimate: `[![Code Climate](https://img.shields.io/codeclimate/maintainability/Ducr/homepage?style=flat-square)](https://codeclimate.com/github/Ducr/homepage)`,
+    codecov: `[![Codecov](https://img.shields.io/codecov/c/github/Ducr/homepage?style=flat-square)](https://codecov.io/gh/Ducr/homepage)`,
   }
 };
 

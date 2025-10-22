@@ -1,37 +1,37 @@
 export const siteConfig = {
   // 基本信息
-  name: "penjc",
-  title: "penjc 的个人主页",
+  name: "Ducr",
+  title: "Ducr主页",
   description: "个人主页",
-  url: "https://pengjiancheng.com",
+  url: "https://ducrong.com",
 
   // 个人信息
   profile: {
     avatar: "/images/avatar.jpg",
-    bio: "無限進步",
-    location: "上海, 中国",
-    email: "penjc204@gmail.com",
-    github: "https://github.com/penjc",
+    bio: "知行合一",
+    location: "广州, 中国",
+    email: "ducrong@126.com",
+    github: "https://github.com/Ducr",
     // 社交媒体链接（可选配置）
-    social: {
-      linkedin: "https://linkedin.com/in/username",
-      twitter: "https://twitter.com/username",
-      bilibili: "https://space.bilibili.com/12345678",
-      youtube: "https://youtube.com/c/username",
-      telegram: "https://t.me/username",
-      instagram: "https://instagram.com/username",
-    },
+    // social: {
+    //   linkedin: "https://linkedin.com/in/username",
+    //   twitter: "https://twitter.com/username",
+    //   bilibili: "https://space.bilibili.com/12345678",
+    //   youtube: "https://youtube.com/c/username",
+    //   telegram: "https://t.me/username",
+    //   instagram: "https://instagram.com/username",
+    // },
     // RSS 订阅配置
-    rss: {
-      enabled: true,
-      title: "RSS 订阅",
-    },
+    // rss: {
+    //   enabled: true,
+    //   title: "RSS 订阅",
+    // },
     // 旧版主页链接
-    oldSite: {
-      enabled: false,
-      url: "https://old.pengjiancheng.com",
-      title: "旧版主页",
-    },
+    // oldSite: {
+    //   enabled: false,
+    //   url: "https://ducrong.com",
+    //   title: "旧版主页",
+    // },
   },
 
   // 首页配置
@@ -74,8 +74,8 @@ export const siteConfig = {
       { name: "博客", href: "/blog" },
       { name: "随笔", href: "/thoughts" },
       { name: "项目", href: "/projects" },
-      { name: "书籍", href: "/books" },
-      { name: "友链", href: "/friends" },
+      // { name: "书籍", href: "/books" },
+      // { name: "友链", href: "/friends" },
       { name: "关于", href: "/about" },
     ],
   },
@@ -86,8 +86,8 @@ export const siteConfig = {
     intro: {
       title: "个人简介",
       paragraphs: [
-        "后端开发工程师。熟练掌握后端技术栈。喜欢学习新技术，关注行业发展趋势。",
-        "在工作之余，我喜欢分享技术文章，参与开源项目，以及探索新的技术领域。相信技术可以改变世界，希望通过自己的努力为这个目标贡献一份力量。"
+        "前端开发工程师。熟练掌握前端技术栈。喜欢学习新技术，关注行业发展趋势。",
+        "在工作之余，我喜欢阅读技术文章，探索新的技术领域。相信技术可以改变世界，希望通过自己的努力为这个目标贡献一份力量。"
       ]
     },
 
@@ -96,18 +96,11 @@ export const siteConfig = {
       title: "教育背景",
       items: [
         {
-          year: "2020 - 2024",
-          degree: "计算机科学与技术 硕士",
-          school: "上海交通大学",
-          description: "主修计算机科学与技术，专业课程包括数据结构、算法设计、数据库系统、软件工程等。",
-          gpa: "3.8/4.0"
-        },
-        {
-          year: "2018 - 2022",
-          degree: "计算机科学与技术 学士",
-          school: "上海大学",
-          description: "主修计算机科学与技术，专业课程包括数据结构、算法设计、数据库系统、软件工程等。",
-          gpa: "3.8/4.0"
+          year: "2013 - 2017",
+          degree: "机械设计制造及其自动化 学士",
+          school: "广州大学",
+          description: "主修机械设计制造及其自动化，第二专业辅修计算机科学与技术。",
+          // gpa: "3.8/4.0"
         }
       ]
     },
@@ -192,8 +185,8 @@ export const siteConfig = {
         description: "基于 Next.js 的个人主页模版，支持博客、随笔等功能",
         image: "/images/projects/homepage.jpg",
         tags: ["Next.js", "TypeScript", "Tailwind CSS"],
-        github: "https://github.com/penjc/homepage",
-        demo: "https://pengjiancheng.com",
+        github: "https://github.com/Ducr/homepage",
+        demo: "https://ducrong.com",
         status: "active", // active | completed | archived
         featured: true
       },
@@ -367,7 +360,7 @@ export const siteConfig = {
   seo: {
     keywords: [
       "个人主页",
-      "后端开发",
+      "前端开发",
       "React",
       "Next.js",
       "TypeScript",
@@ -386,7 +379,7 @@ export const siteConfig = {
 
   // 评论系统配置
   comments: {
-    enabled: false, // 是否启用评论功能
+    enabled: true, // 是否启用评论功能
     provider: "giscus", // 评论系统提供商: giscus | gitalk | valine | waline
 
     // Giscus 配置 (推荐)
@@ -459,8 +452,8 @@ export const siteConfig = {
       showCurrentYear: true, // 是否显示当前年份
     },
     beian: { // 没有可不填
-      police: "沪公网安备31011500000000号", // 公安备案号
-      icp: "沪ICP备2025000000号", // ICP备案号
+      // police: "沪公网安备31011500000000号", // 公安备案号
+      icp: "粤ICP备2025484976号-1", // ICP备案号
     },
   },
 

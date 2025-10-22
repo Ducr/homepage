@@ -1,7 +1,7 @@
 {
-  "name": "@penjc/homepage",
-  "version": "1.9.0",
-  "description": "个人主页模板，支持博客、随笔等功能",
+  "name": "@Ducr/homepage",
+  "version": "1.0.0",
+  "description": "基于 Next.js 的个人主页模板，支持博客、随笔、项目等功能",
   "bin": {
     "create-homepage": "./bin/create-homepage.js"
   },
@@ -83,16 +83,16 @@
     "modern",
     "homepage"
   ],
-  "author": "penjc",
+  "author": "Ducr",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/penjc/homepage"
+    "url": "https://github.com/Ducr/homepage"
   },
   "bugs": {
-    "url": "https://github.com/penjc/homepage/issues"
+    "url": "https://github.com/Ducr/homepage/issues"
   },
-  "homepage": "https://github.com/penjc/homepage#readme",
+  "homepage": "https://github.com/Ducr/homepage#readme",
   "engines": {
     "node": ">=16.0.0",
     "npm": ">=8.0.0"

@@ -76,7 +76,7 @@ export function getBaseUrl(): string {
   
   // if (isProd && isGithubPages) {
   //   const baseUrl = siteConfig.deployment?.baseUrl || '';
-  //   return `https://penjc.github.io${baseUrl}`;
+  //   return `https://Ducr.github.io${baseUrl}`;
   // }
   
   return 'http://localhost:4000';

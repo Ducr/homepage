@@ -1,6 +1,6 @@
 ---
 title: "项目教程"
-date: "2025-06-20"
+date: "2025-10-22"
 category: "个人主页"
 tags: ["Next.js", "个人主页", "安装教程"]
 excerpt: "详细介绍如何从零开始安装、配置和启动这个基于 Next.js 的个人主页项目，包括环境要求、安装步骤和配置说明。"
@@ -38,7 +38,7 @@ git --version     # 确认 Git 已安装
 这是最简单的方式，一条命令即可创建项目：
 
 ```bash
-npx @penjc/homepage my-homepage
+npx @ducr/homepage my-homepage
 cd my-homepage
 npm run dev
 ```
@@ -49,7 +49,7 @@ npm run dev
 
 ```bash
 # 克隆项目
-git clone https://github.com/penjc/homepage.git
+git clone https://github.com/Ducr/homepage.git
 cd homepage
 
 # 安装依赖
@@ -64,7 +64,7 @@ npm run dev
 ### 1. 克隆项目
 
 ```bash
-git clone https://github.com/penjc/homepage.git
+git clone https://github.com/Ducr/homepage.git
 cd homepage
 ```
 
@@ -130,7 +130,7 @@ touch content/blog/my-first-post.md
 ```markdown
 ---
 title: "我的第一篇博客"
-date: "2025-01-27"
+date: "2025-10-11"
 category: "生活"
 tags: ["个人主页", "博客"]
 excerpt: "欢迎来到我的个人主页！"
@@ -309,7 +309,7 @@ npm run type-check
 
 ## 📚 更多资源
 
-- [项目文档](https://github.com/penjc/homepage/blob/main/README.md)
+- [项目文档](https://github.com/Ducr/homepage/blob/main/README.md)
 - [Next.js 官方文档](https://nextjs.org/docs)
 - [Tailwind CSS 文档](https://tailwindcss.com/docs)
 - [TypeScript 文档](https://www.typescriptlang.org/docs)
