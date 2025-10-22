@@ -6,7 +6,7 @@
 
 <div align="center">
   <a href="https://ducrong.com" target="_blank">
-    <img src="https://github.com/Ducr/homepage/blob/master/assets/homepage.svg?raw=true" width="200">
+    <img src="https://github.com/Ducr/homepage/blob/master/assets/homepage.png?raw=true" width="200">
   </a>
 
 [![npm version](https://img.shields.io/npm/v/@ducr/homepage?style=flat-square)](https://www.npmjs.com/package/@ducr/homepage)
