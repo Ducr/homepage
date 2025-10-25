@@ -355,7 +355,7 @@ export default function HomePageClient({ recentPosts }: HomePageClientProps) {
 
       {/* Blog Preview Section */}
       <motion.section 
-        className="py-24 bg-gray-50/50 dark:bg-gray-800/50"
+        className="py-24 bg-gray-50/50 dark:bg-gray-800"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
