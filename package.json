@@ -31,6 +31,7 @@
     "type-check": "tsc --noEmit",
     "prepublishOnly": "npm run type-check",
     "deploy": "node ./bin/deploy.js",
+    "deploy:install": "node ./bin/deploy.js --install",
     "create": "node ./bin/create-homepage.js"
   },
   "dependencies": {
