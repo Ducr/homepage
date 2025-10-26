@@ -30,6 +30,7 @@
     "lint": "next lint",
     "type-check": "tsc --noEmit",
     "prepublishOnly": "npm run type-check",
+    "deploy": "node ./bin/deploy.js",
     "create": "node ./bin/create-homepage.js"
   },
   "dependencies": {
