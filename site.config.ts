@@ -338,7 +338,7 @@ export const siteConfig = {
         image: "/images/projects/DateTimePickerPro.png",
         tags: ["Vue", "element-ui"],
         github: "https://github.com/Ducr/DateTimePickerPro",
-        // demo: "https://ducrong.com/chat",
+        demo: "https://ducrong.com/ducrong-ui/components/element/dateTimePickerPro.html",
         status: "archived",
         featured: false
       },
