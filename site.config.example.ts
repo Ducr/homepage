@@ -454,7 +454,7 @@ export const siteConfig = {
     beian: { // 没有可不填
       // police: "沪公网安备31011500000000号", // 公安备案号
       police: "", // 公安备案号
-      icp: "粤ICP备2025484976号-1", // ICP备案号
+      icp: "粤ICP备2025484976号", // ICP备案号
     },
   },
 
