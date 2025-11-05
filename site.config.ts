@@ -299,6 +299,17 @@ export const siteConfig = {
         featured: true
       },
       {
+        id: "ducrong-ui",
+        title: "Ducrong UI",
+        description: "基于 Element UI 二次封装的UI组件库，使用 VuePress 构建文档",
+        image: "/images/projects/ducrong-ui.png",
+        tags: ["Element UI", "Vue2", "UI组件", "VuePress"],
+        github: "https://github.com/Ducr/ducrong-ui",
+        demo: "https://ducrong.com/ducrong-ui",
+        status: "completed",
+        featured: true
+      },
+      {
         id: "qiankun-demo",
         title: "Qiankun Demo",
         description: "使用 qiankun 改造的微前端落地示例，用于在线演示微前端效果",
