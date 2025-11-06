@@ -6,7 +6,7 @@ tags: ["Npm", "DateTimePickerPro", "Element UI二次封装", "组件使用"]
 excerpt: "介绍DateTimePickerPro如何进行组件安装、引入和使用，包括配置说明。"
 ---
 
-# 如何安装和使用DateTimePickerPro
+# 如何安装和使用
 
 这篇文章将详细介绍DateTimePickerPro如何进行组件安装、引入和使用，包括配置说明。
 
