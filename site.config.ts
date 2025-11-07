@@ -321,6 +321,17 @@ export const siteConfig = {
         featured: true
       },
       {
+        id: "jenkins-deploy",
+        title: "Jenkins 部署",
+        description: "使用 Jenkins 部署主页Web应用，测试账号/密码为 deploy",
+        image: "/images/projects/jenkins-deploy.png",
+        tags: ["Jenkins", "CI/CD"],
+        // github: "https://github.com/Ducr/qiankun-demo",
+        demo: "https://ducrong.com/jenkins",
+        status: "archived",
+        featured: true
+      },
+      {
         id: "ai-chat-server",
         title: "AI Chat 服务端",
         description: "使用 Node.js + Koa + Deepseek API 搭建的服务端，为 AI Chat 应用提供后端API服务",
