@@ -3,7 +3,7 @@
 import { useRef } from 'react';
 import Link from 'next/link';
 import { motion, useInView } from 'framer-motion';
-import { Github, ExternalLink, Star, Code2, Zap, Clock } from 'lucide-react';
+import { Github, Package, ExternalLink, Star, Code2, Zap, Clock } from 'lucide-react';
 import { siteConfig } from '../../site.config';
 import Footer from '../../components/Footer';
 import NavigationWrapper from '../../components/NavigationWrapper';
@@ -211,6 +211,32 @@ export default function ProjectsPage() {
                             </motion.div>
                         )}
 
+                        {project.package && (
+                            <motion.div
+                                initial={{opacity: 0, x: -15, y: 5}}
+                                animate={{
+                                  opacity: 1,
+                                  x: 0,
+                                  y: 0,
+                                  transition: {
+                                    delay: 0.4,
+                                    duration: 0.8,
+                                    ease: [0.22, 1, 0.36, 1]
+                                  }
+                                }}
+                            >
+                              <Link
+                                  href={project.package}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 bg-gray-100/80 dark:bg-gray-700/60 rounded-lg hover:bg-gray-200/80 dark:hover:bg-gray-600/80 transition-all duration-200 font-thin tracking-wide font-serif"
+                              >
+                                <Package size={16}/>
+                                <span>npm包</span>
+                              </Link>
+                            </motion.div>
+                        )}
+
                         {project.demo && (
                             <motion.div
                                 initial={{opacity: 0, x: -15, y: 5}}
@@ -344,6 +370,32 @@ export default function ProjectsPage() {
                               >
                                 <Github size={14}/>
                                 <span>代码</span>
+                              </Link>
+                            </motion.div>
+                        )}
+
+                        {project.package && (
+                            <motion.div
+                                initial={{opacity: 0, x: -15, y: 5}}
+                                animate={{
+                                  opacity: 1,
+                                  x: 0,
+                                  y: 0,
+                                  transition: {
+                                    delay: 0.4,
+                                    duration: 0.8,
+                                    ease: [0.22, 1, 0.36, 1]
+                                  }
+                                }}
+                            >
+                              <Link
+                                  href={project.package}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex items-center gap-1 px-3 py-1.5 text-xs text-gray-700 dark:text-gray-300 bg-gray-100/80 dark:bg-gray-700/60 rounded-md hover:bg-gray-200/80 dark:hover:bg-gray-600/80 transition-all duration-200 font-thin tracking-wide font-serif"
+                              >
+                                <Package size={14}/>
+                                <span>npm包</span>
                               </Link>
                             </motion.div>
                         )}
