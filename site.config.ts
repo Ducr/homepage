@@ -283,6 +283,7 @@ export const siteConfig = {
         image: "/images/projects/homepage.png",
         tags: ["Next.js", "TypeScript", "Tailwind CSS"],
         github: "https://github.com/Ducr/homepage",
+        // package: "https://www.npmjs.com",
         demo: "https://ducrong.com",
         status: "active", // active-进行中 | completed-已完成 | archived-已归档
         featured: true
@@ -294,6 +295,7 @@ export const siteConfig = {
         image: "/images/projects/ai-chat.png",
         tags: ["Vue3", "Vite", "SSE"],
         github: "https://github.com/Ducr/ai-chat-web",
+        // package: "https://www.npmjs.com",
         demo: "https://ducrong.com/chat",
         status: "completed",
         featured: true
@@ -305,6 +307,7 @@ export const siteConfig = {
         image: "/images/projects/ducrong-ui.png",
         tags: ["Element UI", "Vue2", "UI组件", "VuePress"],
         github: "https://github.com/Ducr/ducrong-ui",
+        // package: "https://www.npmjs.com",
         demo: "https://ducrong.com/ducrong-ui",
         status: "completed",
         featured: true
@@ -316,6 +319,7 @@ export const siteConfig = {
         image: "/images/projects/qiankun-demo.png",
         tags: ["qiankun", "Vue", "React", "npm-run-all"],
         github: "https://github.com/Ducr/qiankun-demo",
+        // package: "https://www.npmjs.com",
         demo: "https://ducrong.com/qiankun",
         status: "archived",
         featured: true
@@ -326,7 +330,8 @@ export const siteConfig = {
         description: "使用 Jenkins 部署主页Web应用，测试账号/密码为 deploy",
         image: "/images/projects/jenkins-deploy.png",
         tags: ["Jenkins", "CI/CD"],
-        // github: "https://github.com/Ducr/qiankun-demo",
+        // github: "https://github.com",
+        // package: "https://www.npmjs.com",
         demo: "https://ducrong.com/jenkins",
         status: "archived",
         featured: true
@@ -338,6 +343,7 @@ export const siteConfig = {
         image: "/images/projects/ai-chat.png",
         tags: ["Node.js", "Koa", "Deepseek API"],
         github: "https://github.com/Ducr/ai-chat-server",
+        // package: "https://www.npmjs.com",
         demo: "https://ducrong.com/chat",
         status: "completed",
         featured: false
@@ -349,6 +355,7 @@ export const siteConfig = {
         image: "/images/projects/DateTimePickerPro.png",
         tags: ["Vue", "element-ui"],
         github: "https://github.com/Ducr/DateTimePickerPro",
+        package: "https://www.npmjs.com/package/date-time-picker-pro",
         demo: "https://ducrong.com/ducrong-ui/components/element/dateTimePickerPro.html",
         status: "archived",
         featured: false

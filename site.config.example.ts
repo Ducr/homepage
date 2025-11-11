@@ -186,6 +186,7 @@ export const siteConfig = {
         image: "/images/projects/homepage.jpg",
         tags: ["Next.js", "TypeScript", "Tailwind CSS"],
         github: "https://github.com/Ducr/homepage",
+        package: "https://www.npmjs.com",
         demo: "https://ducrong.com",
         status: "active", // active | completed | archived
         featured: true
@@ -197,6 +198,7 @@ export const siteConfig = {
         image: "/images/projects/spring.jpg",
         tags: ["Java", "FrameWork", "Spring FrameWork"],
         github: "https://github.com/spring-projects/spring-framework",
+        package: "https://www.npmjs.com",
         status: "archived",
         featured: true
       },
@@ -207,6 +209,7 @@ export const siteConfig = {
         image: "/images/projects/apache-nifi.jpg",
         tags: ["Java", "Apache NiFi", "Kafka"],
         github: "https://github.com/apache/nifi",
+        package: "https://www.npmjs.com",
         status: "completed",
         featured: false
       },
@@ -216,6 +219,7 @@ export const siteConfig = {
         description: "高性能的内存数据存储系统，广泛应用于缓存、消息队列、分布式锁等高并发场景",
         tags: ["Redis", "Cache", "Pub/Sub"],
         github: "https://github.com/redis/redis",
+        package: "https://www.npmjs.com",
         status: "completed",
         featured: false
       }
