@@ -57,7 +57,6 @@ Vue.use(DateTimePickerPro)
     value-format="yyyy/MM/dd HH:mm:ss"
     format="yyyy/MM/dd HH:mm:ss"
   ></date-time-picker-pro>
-  </div>
   <!-- 日期时间范围 -->
   <date-time-picker-pro
     v-model="multipleDateTime"
@@ -94,3 +93,6 @@ Vue.use(DateTimePickerPro)
 | custom-second-step | 秒钟数自定义步距，若大于`59`，则只显示`0` | string、number | 自然数 | 1      |
 
 >其他选项可以参照element-ui [DatePicker](https://element.eleme.cn/#/zh-CN/component/date-picker)和 [DateTimePicker](https://element.eleme.cn/#/zh-CN/component/datetime-picker)
+
+## 🖥️Demo  
+[DateTimePickerPro 在线预览](https://ducrong.com/ducrong-ui/components/element/dateTimePickerPro.html)
