@@ -89,5 +89,5 @@ Vue.use(TimePickerPro)
 
 >其他选项可以参照element-ui [TimePicker](https://element.eleme.cn/#/zh-CN/component/time-picker)
 
-## 🔄Demo  
+## 🖥️Demo  
 [TimePickerPro 在线预览](https://ducrong.com/ducrong-ui/components/element/timePickerPro.html)
