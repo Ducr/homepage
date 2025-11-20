@@ -289,6 +289,18 @@ export const siteConfig = {
         featured: true
       },
       {
+        id: "react-antd-admin",
+        title: "React Antd Admin",
+        description: "基于 react-antd-admin 后台管理系统的二次开发，包含项目文档",
+        image: "/images/projects/react-antd-admin.png",
+        tags: ["React", "Ant Design", "Vite", "VitePress"],
+        github: "https://github.com/Ducr/react-antd-admin",
+        // package: "https://www.npmjs.com",
+        demo: "https://ducrong.com/react-antd-admin/",
+        status: "active",
+        featured: true
+      },
+      {
         id: "ai-chat-web",
         title: "AI Chat",
         description: "基于 Vue3.5 + Vite 搭建的 AI Chat 应用，支持 AI 对话聊天",
