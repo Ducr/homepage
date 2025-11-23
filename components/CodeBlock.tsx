@@ -129,7 +129,9 @@ export default function CodeBlock({
         boxShadow: 'none',
         outline: 'none',
         position: 'relative',
-        display: 'block'
+        display: 'block',
+        maxWidth: '100%',
+        overflow: 'hidden'
       }}
     >
       {/* 代码内容 */}
@@ -221,14 +223,16 @@ export default function CodeBlock({
               border: 'none', 
               padding: 0, 
               borderRadius: '0 0 8px 8px', 
-              overflow: 'auto', 
+              overflowX: 'auto', 
+              overflowY: 'visible',
               fontSize: '14px', 
               lineHeight: '1.6', 
               margin: 0,
               boxShadow: 'none',
               outline: 'none',
               fontFamily: "'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace",
-              display: 'flex'
+              display: 'flex',
+              maxWidth: '100%'
             }}
           >
             {/* 行号列 */}
@@ -256,7 +260,7 @@ export default function CodeBlock({
             </div>
             
             {/* 代码内容 */}
-            <div style={{ flex: 1, padding: '20px', overflow: 'auto' }}>
+            <div style={{ flex: 1, padding: '20px', overflowX: 'auto', overflowY: 'visible', minWidth: 0 }}>
               <PrismHighlighter 
                 code={codeString}
                 language={language}

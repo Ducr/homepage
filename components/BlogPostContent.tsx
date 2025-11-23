@@ -76,14 +76,14 @@ export default function BlogPostContent({ post, prevPost, nextPost }: BlogPostCo
   }
 
   return (
-    <div className="bg-white dark:bg-gray-900 min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="lg:flex lg:gap-8 relative">
+    <div className="bg-white dark:bg-gray-900 min-h-screen overflow-x-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+        <div className="lg:flex lg:gap-8 relative w-full">
           {/* Main Content */}
-          <main className={`min-w-0 transition-all duration-300 ease-in-out ${
+          <main className={`min-w-0 transition-all duration-300 ease-in-out w-full ${
             tocCollapsed ? 'lg:flex-1 lg:pr-0' : 'lg:flex-1 lg:pr-8'
           }`}>
-            <div className="prose prose-lg dark:prose-invert max-w-none">
+            <div className="prose prose-lg dark:prose-invert max-w-none overflow-x-hidden">
               {/* Article Content */}
               <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
