@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Menu, X, Search } from 'lucide-react';
 import { siteConfig } from '../site.config';
 import SearchModal from './SearchModal';
+import ThemeToggle from './ThemeToggle';
 import { BlogPost, Thought } from '../lib/types';
 import { trackEvent } from './GoogleAnalytics';
 
@@ -42,11 +43,11 @@ export default function Navigation({ posts, thoughts }: NavigationProps) {
 
   return (
     <>
-      <nav className="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 z-50">
+      <nav className="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 z-50 overflow-x-hidden overflow-y-hidden">
         <div className="container-custom">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex items-center justify-between h-16 min-w-0 gap-2">
             {/* Logo */}
-            <Link href="/" className="text-xl font-thin tracking-widest text-gray-900 dark:text-white font-serif italic">
+            <Link href="/" className="text-xl font-thin tracking-widest text-gray-900 dark:text-white font-serif italic truncate flex-shrink min-w-0 max-w-[calc(100%-120px)]">
               {siteConfig.name}
             </Link>
 
@@ -71,6 +72,9 @@ export default function Navigation({ posts, thoughts }: NavigationProps) {
                 </Link>
               ))}
               
+              {/* Theme Toggle Button */}
+              <ThemeToggle />
+              
               {/* Search Button */}
               <button
                 onClick={handleSearchOpen}
@@ -80,24 +84,25 @@ export default function Navigation({ posts, thoughts }: NavigationProps) {
               >
                 <Search size={20} />
                 {/* 快捷键提示 */}
-                <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 px-2 py-1 text-xs bg-gray-800 dark:bg-gray-200 text-white dark:text-gray-800 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                <span className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 px-2 py-1 text-xs bg-gray-800 dark:bg-gray-200 text-white dark:text-gray-800 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-50">
                   Ctrl+K
                 </span>
               </button>
             </div>
 
             {/* Mobile Menu Button */}
-            <div className="md:hidden flex items-center space-x-2">
+            <div className="md:hidden flex items-center space-x-1 flex-shrink-0">
+              <ThemeToggle />
               <button
                 onClick={handleSearchOpen}
-                className="p-2 text-gray-600 dark:text-gray-300"
+                className="p-2 text-gray-600 dark:text-gray-300 flex-shrink-0"
                 aria-label="搜索"
               >
                 <Search size={20} />
               </button>
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="p-2 text-gray-600 dark:text-gray-300"
+                className="p-2 text-gray-600 dark:text-gray-300 flex-shrink-0"
                 aria-label="切换菜单"
               >
                 {isOpen ? <X size={24} /> : <Menu size={24} />}

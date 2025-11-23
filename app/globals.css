@@ -5,6 +5,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
     /* 强制使用指定字体 */
     font-family: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', sans-serif;
   }
@@ -13,14 +14,20 @@
     font-family: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #ffffff;
+    overflow-x: hidden;
+    /* 移除硬编码背景色，完全依赖 Tailwind 类（body 标签上的 bg-white dark:bg-gray-900） */
     /* 确保字体加载期间有合适的回退 */
     font-display: swap;
     font-weight: 400;
   }
   
-  .dark body {
-    background-color: #0f172a;
+  /* 确保暗色主题时文本颜色正确 */
+  html.dark {
+    color-scheme: dark;
+  }
+  
+  html.light {
+    color-scheme: light;
   }
   
   /* 强制所有文本元素使用正确的字体 */

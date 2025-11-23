@@ -99,6 +99,50 @@ export default function RootLayout({
   return (
     <html lang="zh-CN" suppressHydrationWarning>
       <head>
+        {/* 主题初始化脚本 - 必须在任何内容渲染之前执行，避免闪烁 */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var html = document.documentElement;
+                  
+                  // 先移除可能存在的主题类
+                  html.classList.remove('light', 'dark');
+                  
+                  // 从 localStorage 读取保存的主题
+                  var savedTheme = localStorage.getItem('theme');
+                  
+                  // 确定最终主题
+                  var finalTheme = 'light';
+                  if (savedTheme === 'light' || savedTheme === 'dark') {
+                    finalTheme = savedTheme;
+                  } else {
+                    // 如果没有保存的主题，检查系统偏好
+                    var systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                    if (systemPrefersDark) {
+                      finalTheme = 'dark';
+                    }
+                  }
+                  
+                  // 立即设置主题类，在任何渲染之前
+                  html.classList.add(finalTheme);
+                  html.setAttribute('data-theme', finalTheme);
+                } catch (e) {
+                  // 如果出错，默认使用亮色主题
+                  try {
+                    var html = document.documentElement;
+                    html.classList.remove('light', 'dark');
+                    html.classList.add('light');
+                    html.setAttribute('data-theme', 'light');
+                  } catch (err) {
+                    // 忽略错误
+                  }
+                }
+              })();
+            `,
+          }}
+        />
         {/* 字体预连接和预加载优化 */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

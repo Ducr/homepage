@@ -2,23 +2,42 @@ import { useState, useEffect, useCallback } from 'react';
 
 type Theme = 'light' | 'dark';
 
+// 获取初始主题的函数，在组件外部定义，避免每次渲染都执行
+function getInitialTheme(): Theme {
+  // 在浏览器环境中
+  if (typeof window !== 'undefined') {
+    // 优先从 HTML 元素读取已设置的主题（由内联脚本设置）
+    const html = document.documentElement;
+    if (html.classList.contains('dark')) {
+      return 'dark';
+    }
+    if (html.classList.contains('light')) {
+      return 'light';
+    }
+    
+    // 如果 HTML 上没有主题类，则从 localStorage 读取保存的主题
+    const savedTheme = localStorage.getItem('theme') as Theme | null;
+    if (savedTheme === 'light' || savedTheme === 'dark') {
+      return savedTheme;
+    }
+    
+    // 最后检查系统偏好
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    return systemPrefersDark ? 'dark' : 'light';
+  }
+  
+  // SSR 时返回默认值
+  return 'light';
+}
+
 export function useTheme() {
-  const [theme, setTheme] = useState<Theme>('light');
+  // 使用函数初始化，确保在首次渲染时就读取正确的主题
+  const [theme, setTheme] = useState<Theme>(getInitialTheme);
   const [mounted, setMounted] = useState(false);
 
-  // 初始化主题
+  // 只在组件挂载时设置 mounted 标志，不修改 theme（theme 已经在初始化时正确设置了）
   useEffect(() => {
     setMounted(true);
-
-    // 从 localStorage 读取保存的主题
-    const savedTheme = localStorage.getItem('theme') as Theme | null;
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-    if (savedTheme && (savedTheme === 'light' || savedTheme === 'dark')) {
-      setTheme(savedTheme);
-    } else if (systemPrefersDark) {
-      setTheme('dark');
-    }
   }, []);
 
   // 监听系统主题变化
@@ -58,7 +77,7 @@ export function useTheme() {
   }, [theme]);
 
   return {
-    theme: mounted ? theme : 'light', // 避免 SSR 时闪烁
+    theme,
     toggleTheme,
     mounted
   };
