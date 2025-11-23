@@ -284,19 +284,19 @@ export default function BlogPostContent({ post, prevPost, nextPost }: BlogPostCo
 
               {/* Navigation */}
               {(prevPost || nextPost) && (
-                <div className="flex justify-between items-center mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
-                  <div className="flex-1">
+                <div className="flex flex-col sm:flex-row justify-between items-stretch sm:items-center gap-4 sm:gap-0 mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+                  <div className="flex-1 min-w-0">
                     {prevPost && (
                       <Link 
                         href={`/blog/${prevPost.slug}`}
-                        className="group flex items-center gap-3 p-4 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 transition-colors no-underline"
+                        className="group flex items-center gap-3 p-4 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 transition-colors no-underline w-full"
                       >
                         <div className="flex-shrink-0">
                           <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-600 dark:group-hover:text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                           </svg>
                         </div>
-                        <div className="flex-1 min-w-0">
+                        <div className="flex-1 min-w-0 overflow-hidden">
                           <p className="text-sm text-gray-500 dark:text-gray-400 font-thin tracking-wide font-serif">上一篇</p>
                           <p className="text-gray-900 dark:text-white font-medium truncate font-thin tracking-wide font-serif">
                             {prevPost.title}
@@ -306,13 +306,13 @@ export default function BlogPostContent({ post, prevPost, nextPost }: BlogPostCo
                     )}
                   </div>
                   
-                  <div className="flex-1 ml-4">
+                  <div className="flex-1 min-w-0 sm:ml-4">
                     {nextPost && (
                       <Link 
                         href={`/blog/${nextPost.slug}`}
-                        className="group flex items-center gap-3 p-4 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 transition-colors no-underline"
+                        className="group flex items-center gap-3 p-4 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 transition-colors no-underline w-full"
                       >
-                        <div className="flex-1 min-w-0 text-right">
+                        <div className="flex-1 min-w-0 overflow-hidden text-right">
                           <p className="text-sm text-gray-500 dark:text-gray-400 font-thin tracking-wide font-serif">下一篇</p>
                           <p className="text-gray-900 dark:text-white font-medium truncate font-thin tracking-wide font-serif">
                             {nextPost.title}
