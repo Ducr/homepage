@@ -301,6 +301,18 @@ export const siteConfig = {
         featured: true
       },
       {
+        id: "vue-vben-admin",
+        title: "Vue Vben Admin",
+        description: "基于 vue-vben-admin 中后台管理系统的二次开发，包含项目文档",
+        image: "/images/projects/vue-vben-admin.png",
+        tags: ["Vue", "Vben", "Vite", "Monorepo"],
+        github: "https://github.com/Ducr/vue-vben-admin-playground",
+        // package: "https://www.npmjs.com",
+        demo: "https://ducrong.com/vue-vben-admin/",
+        status: "active",
+        featured: true
+      },
+      {
         id: "ai-chat-web",
         title: "AI Chat",
         description: "基于 Vue3.5 + Vite 搭建的 AI Chat 应用，支持 AI 对话聊天",
